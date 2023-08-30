@@ -88,6 +88,51 @@
       "history": "history"
     }
   },
+  "icl_eval_content": {
+    "script_url": "icl_eval_content",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
+  },
+  "icl_eval_keypoint": {
+    "script_url": "icl_eval_keypoint",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
+  },
+  "人群购买_icl": {
+    "script_url": "people_purchase_icl",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
+  },
+  "典型理念_icl": {
+    "script_url": "classic_concept_icl",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
+  },
+  "理念导入_icl": {
+    "script_url": "concept_icl",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
+  },
   "guanaco": {
     "hf_hub_url": "JosephusCheung/GuanacoDataset"
   },

@@ -74,10 +74,14 @@ def init_adapter(
 
             for checkpoint in checkpoints_to_merge:
                 model = PeftModel.from_pretrained(model, checkpoint)
-                model = model.merge_and_unload()
+                for name, param in model.named_parameters():
+                    if "lora_B" in name:
+                        print(name, param)
+                        break
+                # model = model.merge_and_unload()
 
-            if len(checkpoints_to_merge) > 0:
-                logger.info("Merged {} model checkpoint(s).".format(len(checkpoints_to_merge)))
+            # if len(checkpoints_to_merge) > 0:
+            #     logger.info("Merged {} model checkpoint(s).".format(len(checkpoints_to_merge)))
 
             if latest_checkpoint is not None: # resume lora training
                 model = PeftModel.from_pretrained(model, latest_checkpoint, is_trainable=True)

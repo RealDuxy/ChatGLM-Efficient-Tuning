@@ -71,6 +71,12 @@ def load_model_and_tokenizer(
         padding_side="left",
         **config_kwargs
     )
+    # tokenizer = AutoTokenizer.from_pretrained(
+    #     model_args.tokenizer_name if model_args.tokenizer_name else model_args.model_name_or_path,
+    #     use_fast=model_args.use_fast_tokenizer,
+    #     padding_side="right",
+    #     **config_kwargs
+    # )
 
     config = AutoConfig.from_pretrained(
         model_args.config_name if model_args.config_name else model_args.model_name_or_path,

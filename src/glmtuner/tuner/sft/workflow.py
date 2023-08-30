@@ -50,9 +50,11 @@ def run_sft(
     # Keyword arguments for `model.generate`
     gen_kwargs = {
         "do_sample": True,
-        "top_p": 0.7,
+        # "top_p": 0.7,
+        "top_p": 0.95,
         "max_new_tokens": data_args.max_target_length + 1,
-        "temperature": 0.95,
+        # "temperature": 0.95,
+        "temperature": 0.1,
         "logits_processor": get_logits_processor()
     }
 
